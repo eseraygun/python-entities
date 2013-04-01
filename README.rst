@@ -17,8 +17,8 @@ Typical usage looks like this::
     from entities import *
 
     class Account(Entity):
-        id = IntegerField(group=PRIMARY)
-        iban = IntegerField(group=SECONDARY)
+        id = IntegerField(group=PRIMARY)  # this field is in primary key group
+        iban = IntegerField(group=SECONDARY)  # this is in secondary key group
         balance = FloatField(default=0.0)
 
     class Name(Entity):
@@ -26,12 +26,12 @@ Typical usage looks like this::
         last_name = StringField(group=SECONDARY)
 
     class Customer(Entity):
-        id = IntegerField(group=PRIMARY)  # this field is in primary key group
-        name = EntityField(Name, group=SECONDARY)  # this is in secondary key group
+        id = IntegerField(group=PRIMARY)
+        name = EntityField(Name, group=SECONDARY)
         accounts = ListField(ReferenceField(Account), default=[])
 
     # Create Account objects.
-    a_1 = Account(1, 111, 10.0)  # init recognize positional arguments
+    a_1 = Account(1, 111, 10.0)  # __init__() recognize positional arguments
     a_2 = Account(id=2, iban=222, balance=20.0)  # as well as keyword arguments
 
     # Generate hashable key using primary key.
