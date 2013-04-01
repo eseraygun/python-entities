@@ -9,6 +9,13 @@ and non-recursive collection types (list, set and dict), nested entities and
 reference fields. It can automatically validate, serialize, deserialize and
 generate hashable keys for entities of any complexity.
 
+Installation
+============
+
+You can install the most recent release using `pip`:
+
+    pip install entities
+
 Usage
 =====
 
