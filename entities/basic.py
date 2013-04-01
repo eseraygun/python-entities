@@ -1,4 +1,5 @@
 PRIMARY = 0
+SECONDARY = 1
 
 
 class ValidationError(Exception):
