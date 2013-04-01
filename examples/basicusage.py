@@ -15,7 +15,7 @@ class Name(Entity):
 class Customer(Entity):
     id = IntegerField(group=PRIMARY)
     name = EntityField(Name, group=SECONDARY)
-    accounts = ListField(ReferenceField(Account), default=[])
+    accounts = ListField(ReferenceField(Account), default=list)
 
 
 # Create Account objects.
