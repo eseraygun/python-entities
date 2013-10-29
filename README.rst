@@ -38,7 +38,7 @@ Typical usage looks like this::
         accounts = ListField(ReferenceField(Account), default=list)
 
     # Create Account objects.
-    a_1 = Account(1, 111, 10.0)  # __init__() recognize positional arguments
+    a_1 = Account(1, 111, 10.0)  # __init__() recognizes positional arguments
     a_2 = Account(id=2, iban=222, balance=20.0)  # as well as keyword arguments
 
     # Generate hashable key using primary key.
