@@ -19,7 +19,9 @@ You can install the most recent release using `pip`:
 Usage
 =====
 
-Typical usage looks like this::
+Typical usage looks like this:
+
+.. code-block:: python
 
     from entities import *
 
